@@ -6,14 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-	logo = 'LoveMountain';
-	nombre:string ='';
-	textSearch = 'Aqui click buscar'
-	inputBuscar = false
+	inputValue = '';
+	creatStatus = 'No app was create'
 
-	btnBscar(){
-		this.textSearch = 'Escribir'
-		this.inputBuscar = true
-	}
-  
+	onCreateInfo() {
+		this.creatStatus = 'App was create ' +  this.inputValue;
+ 	}
 }
