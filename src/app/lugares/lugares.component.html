@@ -1,0 +1,17 @@
+<div class="box--Intro">
+	<div class="item" *ngFor="let lugar of lugares">
+		<div class="row">
+			<div class="col-md-4">
+				<img src="{{lugar.image}}" sizes="(min-width: 400px) 80vw, 100vw">
+			</div>
+			<div class="col-md-8">
+				<div class="itemDetalle">
+					<h3>{{lugar.title}}</h3>
+					<h6>{{lugar.lugar}}</h6>
+					<p class="itemDetalle_Date">{{lugar.detalle}}</p>
+					<a href="{{lugar.link}}" target="_blank">Ver su portafolio</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

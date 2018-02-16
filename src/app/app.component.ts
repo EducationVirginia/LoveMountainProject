@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'app';
+	logo = 'LoveMountain';
+	nombre:string ='';
+	textSearch = 'Aqui click buscar'
+	inputBuscar = false
+
+	btnBscar(){
+		this.textSearch = 'Escribir'
+		this.inputBuscar = true
+	}
+  
 }
