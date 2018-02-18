@@ -1,34 +1,21 @@
+<!-- NAVIGATION -->
+<app-navigation></app-navigation>
+<!-- /NAVIGATION -->
+
 <!-- HEADER -->
-<header>
-  <div class="bgFull"></div>
-  <div class="container">
-    <div class="logo">
-      <div class="icon">
-        <i class="fas fa-angle-up"></i>
-      </div>
-      <h1><span>Love</span>Mountain</h1>
-    </div>
-  </div>
-</header>
+<app-header></app-header>
 <!-- /HEADER -->
 
 <!-- CONTENT -->
 <div class="container">
-  <button class="btn btn-primary" (click)="onCreateInfo()">Entrar</button>
-  <input type="text" placeholder="Buscar" [(ngModel)]="inputValue">
-  <p>{{inputValue}}</p>
-  <p>{{creatStatus}}</p>
 
-  <!-- <app-detalles></app-detalles> -->
+  <!-- APP CONTENT-->
   <router-outlet></router-outlet>
+  <!-- /APP CONTENT-->
+
 </div>
 <!-- /CONTENT -->
 
 <!-- FOOTER -->
-<footer>
-  <div class="container">
-    <div class="lineFooter"></div>
-    <p>Copyright JS.Virginia and other contributors | @Virginia.Creativa</p>
-  </div>
-</footer>
+<app-footer></app-footer>
 <!-- /FOOTER -->

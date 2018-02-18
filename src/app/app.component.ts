@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-	inputValue = '';
-	creatStatus = 'No app was create'
-
-	onCreateInfo() {
-		this.creatStatus = 'App was create ' +  this.inputValue;
- 	}
+	
 }
