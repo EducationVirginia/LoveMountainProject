@@ -19,7 +19,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ReservarComponent } from './reservar/reservar.component';
 
 const appRoutes: Routes = [
-  {path: 'home', component: AppComponent},
   {path: 'tourmountains', component: MountainsComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'contact', component: ContactComponent},
