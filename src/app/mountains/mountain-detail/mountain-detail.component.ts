@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MountainDetailComponent implements OnInit {
 
+	lat: number = 46.4102012;
+	lng: number = 11.5850429;
   constructor() { }
 
   ngOnInit() {

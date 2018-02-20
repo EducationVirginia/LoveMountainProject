@@ -12,4 +12,6 @@ export class MountainsList {
 		this.country = count;
 		this.city = city;
 	}
+
+
 }

@@ -1,42 +1,18 @@
 <div class="container">
-	<div class="sort-by-wrapper">
-		<p>View as:</p>
-		<button><i class="fas fa-th-large"></i></button>
-		<button><i class="fas fa-th-list"></i></button>
-		<button><i class="fas fa-pencil-alt"></i></button>
-	</div>
 	<div class="mount-list" *ngFor="let mountList of mountainsList">
-		<!-- LIST -->
 		<div class="row">
 			<div class="col-md-4">
 				<img src="{{mountList.imagePath}}" sizes="(min-width: 400px) 80vw, 100vw" alt="{{mountList.title}}">
 			</div>
 			<div class="col-md-8">
+				
 				<div class="listDetalle">
 					<h3>{{mountList.title}}</h3>
 					<h6><i class="fas fa-map-marker-alt"></i> {{mountList.country}}, {{mountList.city}} </h6>
 					<p class="itemDetalle_Date">{{mountList.description}}</p>
-					<a href="#" class="btn btn-primary">View</a>
+					<a href="/tourmountains_deatil" class="btn btn-primary">View</a>
 				</div>
-
 			</div>
 		</div>
-		<!-- /LIST -->
-		<!-- LIST -->
-		<div class="row">
-			<div class="col-md-4">
-				<img src="{{mountList.imagePath}}" sizes="(min-width: 400px) 80vw, 100vw" alt="{{mountList.title}}">
-			</div>
-			<div class="col-md-8">
-				<div class="listDetalle">
-					<h3>{{mountList.title}}</h3>
-					<h6><i class="fas fa-map-marker-alt"></i> {{mountList.country}}, {{mountList.city}} </h6>
-					<p class="itemDetalle_Date">{{mountList.description}}</p>
-					<a href="#" class="btn btn-primary">View</a>
-				</div>
-
-			</div>
-		</div>
-		<!-- /LIST -->
 	</div>
 </div>

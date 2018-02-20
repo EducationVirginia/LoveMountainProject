@@ -1,9 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
 $grayBg: #F5F5F5;
 
+h1, h2, h3, h4, h5, h6 
+	color: #2E3E4E !important;
 .boxSpace 
 	padding: 60px 0;
 	&.gray
 		background-color: $grayBg;
 
-	
+.sort-by-wrapper
+	p, button 
+		display: inline-block;
+	button
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		color: var(--gray);
+		margin: 0;
+		padding: 0 2px;
+		&:hover
+			color: var(--blue);
+	p
+		color: #9BA6B2;
+		font-size: 12px;
+
+.lineContent
+	border: 0.5px solid #ddd;
+	width: 80%;
+	margin: 40px auto;
+	text-align: center;
+
+.groupsInto
+		padding: 0 6px;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+		p, a
+			font-size: 12px;
+			margin-right: 6px;
+			color: var(--gray);
+		h5 
+			color: #212529 !important;
+			font-weight: 600;
+		
+		.countrySelec
+			font-size: 12px;
+			.svg-inline--fa
+				margin-right: 5px;
