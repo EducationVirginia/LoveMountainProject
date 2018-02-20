@@ -1,24 +1,38 @@
 .mount-items 
+
 	.item
+		margin-bottom: 10px;
+
 		&:hover 
-			border: 1px solid #ddd;
+			.groupsIntroItem
+				border-right: 1px solid #ddd;
+				border-left: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				padding: 10px 6px;
 		a 
 			&:hover 
 				text-decoration: none;
+		.imagen 
+			overflow: hidden;
+			height: 237px;
+			width: 340px;
 			img
-				max-width: 100%;
-				margin-bottom: 10px;
-			.groupsIntroItem
-				padding: 0 6px;
-				h5 
-					color: #212529 !important;
-					font-weight: 600;
-				
-				.countrySelec
-					font-size: 12px;
-					position: relative;
-					top: 5px;
-					color: var(--gray);
-					.svg-inline--fa
-						margin-right: 5px;
+				max-width: 160%; 
+		.groupsIntroItem
+			padding: 10px 6px;
+			border-right: 1px solid #fff;
+			border-left: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			h6 
+				color: #212529 !important;
+				font-weight: 600;
+			
+			.countrySelec
+				font-size: 10px !important;
+				position: relative;
+				top: 5px;
+				color: var(--gray);
+				.svg-inline--fa
+					margin-right: 5px;
+
 

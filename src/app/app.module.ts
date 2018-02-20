@@ -21,7 +21,7 @@ import { ReservarComponent } from './reservar/reservar.component';
 
 const appRoutes: Routes = [
   {path: 'tourmountains', component: MountainsComponent},
-  {path: 'tourmountains_deatil', component: MountainDetailComponent},
+  {path: 'tourmountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'contact', component: ContactComponent},
 ]

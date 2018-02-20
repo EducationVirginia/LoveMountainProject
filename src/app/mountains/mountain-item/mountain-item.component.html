@@ -2,18 +2,19 @@
 
 	<div class="mount-items">
 		<div class="row">
-			<div class="col-md-4">
-
+			<div class="col-md-4" *ngFor="let mountain of mountains">
 				<div class="item">
-					<a href="/tourmountains_deatil">
-						<img src="https://source.unsplash.com/collection/148982/1600x900?page=1" class="img-responsive" alt="">
+					<a href="/tourmountains_deatil/{{mountain.id}}">
+						<div class="imagen">
+							<img src="{{mountain.imagePath}}" class="img-responsive" alt="{{mountain.title}}">
+						</div>
 						<div class="groupsIntroItem">
 							<div class="row">
 								<div class="col-md-6">
-									<h5>Title item</h5>
+									<h6>{{mountain.title}}</h6>
 								</div>
 								<div class="col-md-6 text-right">
-									<p class="countrySelec"><i class="fas fa-map-marker-alt"></i>Country, City</p>
+									<p class="countrySelec"><i class="fas fa-map-marker-alt"></i>{{mountain.country}}, {{mountain.city}}</p>
 								</div>
 							</div>
 						</div>
