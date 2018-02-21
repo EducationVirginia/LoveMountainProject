@@ -22,7 +22,8 @@ export class MountainDetailComponent implements OnInit {
 			twitter: '@mattiasmilos',
 			imagePath: 'https://images.unsplash.com/photo-1508437226781-7cdb8043d2a8?ixlib=rb-0.3.5&s=a60292231cddf13a5ac886fea4fe4c75&auto=format&fit=crop&w=2850&q=80',
 			country: ' Switzerland',
-			city: 'Zermatt'
+			city: 'Zermatt',
+			topBgImgHeader: '-175%'
 		},
 		{
 			id: 2,
@@ -34,7 +35,8 @@ export class MountainDetailComponent implements OnInit {
 			twitter: '@calibre9001',
 			imagePath: 'https://images.unsplash.com/photo-1497106636505-e4fd6e16d74c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=49ec3232d65c27e39a64c837b7be9832&auto=format&fit=crop&w=2756&q=80',
 			country: ' Peru',
-			city: 'Alpamayo'
+			city: 'Alpamayo',
+			topBgImgHeader: '-147%'
 		},
 		{
 			id: 3,
@@ -46,7 +48,8 @@ export class MountainDetailComponent implements OnInit {
 			twitter: '@martinjphoto',
 			imagePath: 'https://images.unsplash.com/photo-1486911278844-a81c5267e227?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=07a040d0b8e3866b9087e5b2103e88ee&auto=format&fit=crop&w=2850&q=80',
 			country: ' Iran',
-			city: 'Mount Damavand'
+			city: 'Mount Damavand',
+			topBgImgHeader: '-201%'
 		},
 		{
 			id: 4,
@@ -58,7 +61,8 @@ export class MountainDetailComponent implements OnInit {
 			twitter: '@fellowferdi',
 			imagePath: 'https://images.unsplash.com/photo-1508592931388-95bc7b61033d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=481808169e4b7432d631e8018a424874&auto=format&fit=crop&w=1950&q=80',
 			country: ' Norway',
-			city: 'Stetind'
+			city: 'Stetind',
+			topBgImgHeader: '-225%'
 		},
 		{
 			id: 5,
@@ -70,7 +74,8 @@ export class MountainDetailComponent implements OnInit {
 			twitter: '@jens_johnsson',
 			imagePath: 'https://images.unsplash.com/photo-1508235181320-6703c60c27ad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dc6e2d0750ca5e6d1dc7917cfabf4bc7&auto=format&fit=crop&w=1950&q=80',
 			country: 'Argentina/Chile',
-			city: 'Cerro Torre'
+			city: 'Cerro Torre',
+			topBgImgHeader: '-175%'
 		}
 	];
 	

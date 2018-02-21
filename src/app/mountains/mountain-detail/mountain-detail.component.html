@@ -1,5 +1,29 @@
-<div class="container">
+<!-- HEADER -->
+<header>
+	<div class="bgImgId" [style.top]="mountain.topBgImgHeader">
+		<img src="{{mountain.imagePath}}" alt="" >
+	</div>
+	<div class="bgFull"></div>
+	<div class="container">
+		<div class="content-inner">
+			<div class="item">
+			<h2>{{mountain.title}}</h2>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- /HEADER -->
 
+<div class="well">
+	<div class="container">
+		<a routerLink="/">Home</a>
+		<p>/ </p>
+		<a routerLink="/tourmountains">Tours Mountains</a>
+		<p>/ {{mountain.title}}</p>
+	</div>
+</div>
+
+<div class="container">
 	<div class="manage">
 		<p>Manage:</p>
 		<a href="#" class="button"><i class="fas fa-pencil-alt"></i></a>
@@ -8,7 +32,6 @@
 	<div class="mountain-detail-content">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>{{mountain.title}}</h1>
 				<div class="row">
 					<div class="col-md-7">
 						<div class="groupsInto">
