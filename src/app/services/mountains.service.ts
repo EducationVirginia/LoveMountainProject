@@ -73,6 +73,11 @@ export class MountainsService {
 	public getMountains() {
 		return this.mountains;
 	}
+	public detailMount(id){
+		return this.mountains.find((mountain) => {
+			return mountain.id == id 
+		});
+	}
   constructor() { }
 
 }
