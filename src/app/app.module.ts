@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms'
 import { Routes, RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
+import { MountainsService } from './services/mountains.service';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -51,7 +53,7 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyAUQJYch7LqsHbehONVtk_ETeJbFUuSBtM'
     })
   ],
-  providers: [],
+  providers: [MountainsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
