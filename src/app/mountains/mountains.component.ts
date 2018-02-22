@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MountainsComponent implements OnInit {
 
-  showList = true;
-  showGrid = false;
+
+  showGrid: boolean = false;
+  showList: boolean = true;
 
 	constructor() { }
 
@@ -18,9 +19,11 @@ export class MountainsComponent implements OnInit {
   btnGrid() {
     this.showGrid = true;
     this.showList = false;
+
   }
   btnList() {
     this.showGrid = false;
     this.showList = true;
   }
+
 }

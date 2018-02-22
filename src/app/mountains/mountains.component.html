@@ -22,8 +22,8 @@
 <div class="container">
 	<div class="sort-by-wrapper">
 		<p>View as:</p>
-		<button (click)='btnGrid()'[ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}"><i class="fas fa-th-large"></i></button>
-		<button (click)='btnList()' ><i class="fas fa-th-list"></i></button>
+		<button (click)='btnGrid()' [ngStyle]="{'color': showList ? '#6c757d' : '#007bff' }"><i class="fas fa-th-large"></i></button>
+		<button (click)='btnList()' [ngStyle]="{'color': showGrid ? '#6c757d' : '#007bff' }"><i class="fas fa-th-list"></i></button>
 	</div>
 </div>
 <app-mountain-list *ngIf='showList'></app-mountain-list>
