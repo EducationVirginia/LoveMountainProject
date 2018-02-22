@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-detail',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogDetailComponent implements OnInit {
 
-  constructor() { }
+	id = null;
+	blog: any = {};
 
-  ngOnInit() {
-  }
+
+
+	constructor(private route: ActivatedRoute, private  BlogService: BlogService ) { 
+		this.id = this.route.snapshot.params['id'];
+		this.blog = this.BlogService.detailBlog(this.id);
+	}
+
+	ngOnInit() {
+	}
 
 }

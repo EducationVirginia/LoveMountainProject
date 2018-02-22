@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
 import { MountainsService } from './services/mountains.service';
+import { BlogService } from './services/blog.service';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
   {path: 'tourmountains', component: MountainsComponent},
   {path: 'tourmountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
+  {path: 'blog_deatil/:id', component: BlogDetailComponent},
   {path: 'contact', component: ContactComponent},
 ]
  
@@ -53,7 +55,7 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyAUQJYch7LqsHbehONVtk_ETeJbFUuSBtM'
     })
   ],
-  providers: [MountainsService],
+  providers: [MountainsService, BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
