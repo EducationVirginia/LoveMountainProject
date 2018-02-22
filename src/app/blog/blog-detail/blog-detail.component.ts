@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from '../blog.module'
 
 @Component({
   selector: 'app-blog-detail',
@@ -8,7 +7,6 @@ import { Blog } from '../blog.module'
 })
 export class BlogDetailComponent implements OnInit {
 
-	blogs: Blog[] =[];
   constructor() { }
 
   ngOnInit() {
