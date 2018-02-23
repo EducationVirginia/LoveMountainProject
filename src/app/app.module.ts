@@ -28,9 +28,9 @@ import { ReservarComponent } from './reservar/reservar.component';
 import { CreatingComponent } from './mountains/creating/creating.component';
 
 const appRoutes: Routes = [
-  {path: 'tourmountains', component: MountainsComponent},
+  {path: 'mountains', component: MountainsComponent},
   {path: 'mountains_creat', component: CreatingComponent},
-  {path: 'tourmountains_deatil/:id', component: MountainDetailComponent},
+  {path: 'mountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'blog_deatil/:id', component: BlogDetailComponent},
   {path: 'contact', component: ContactComponent},

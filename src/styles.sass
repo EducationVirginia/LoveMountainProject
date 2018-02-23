@@ -15,11 +15,20 @@ header
 	max-width: 100%;
 	height: 260px;
 	margin-bottom: 40px;
+	&:after 
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.1);
 	.content-inner 
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		z-index: 22;
+		z-index: 2;
 		height: 260px;
 		.item
 			align-self: center;
@@ -29,14 +38,6 @@ header
 				color: #fff !important;
 			h4 
 				font-weight: 300;
-	.bgFull 
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, .3);
-		z-index: -2;
 header
 	&.header_corto 
 		margin-bottom: 0;
@@ -134,9 +135,8 @@ header
 			li, p
 				display: inline-block;
 			li
-				&:last-child
-					&:after
-						content: '';
+				&:matches(:last-child :after)
+					content: '';
 				&:after
 					content: '/';
 					color: #fddd;
@@ -174,10 +174,9 @@ header
 				display: inline-block;
 
 			li
+				&:matches(:last-child :after)
+					content: '';
 
-				&:last-child
-					&:after
-						content: '';
 				&:after
 					content: '/';
 					color: #fddd;
