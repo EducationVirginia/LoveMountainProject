@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6
 	color: #2E3E4E !important;
 a 
 	&:hover 
-		text-decoration: none;
+		text-decoration: none !important;
 /*==================== HEADER ====================*/
 header 
 	margin-top: 51px;
@@ -52,8 +52,10 @@ header
 .fa-map-marker-alt
 	color: #18BAB6; 
 .sort-by-wrapper
-	p, button 
-		display: inline-block;
+	.row
+		margin-bottom: 10px;
+	.grView 
+		padding: 6px 0;
 	button
 		background-color: transparent;
 		border: none;
@@ -66,6 +68,10 @@ header
 	p
 		color: #9BA6B2;
 		font-size: 12px;
+		margin-bottom: 0;
+	.btnCreate
+		.svg-inline--fa
+			margin-right: 6px;
 
 .lineContent
 	border: 1px dotted #ddd;

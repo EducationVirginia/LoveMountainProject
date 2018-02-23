@@ -1,6 +1,5 @@
 <!-- HEADER -->
 <header class="header_corto">
-  <div class="bgFull"></div>
   <div class="container">
   	<div class="content-inner">
   		<div class="item">
@@ -21,10 +20,16 @@
 
 <div class="container">
 	<div class="sort-by-wrapper">
-		<p>View as:</p>
-		<button (click)='btnGrid()' [ngStyle]="{'color': showList ? '#6c757d' : '#007bff' }"><i class="fas fa-th-large"></i></button>
-		<button (click)='btnList()' [ngStyle]="{'color': showGrid ? '#6c757d' : '#007bff' }"><i class="fas fa-th-list"></i></button>
-		<button routerLink='/mountains_creat'><i class="far fa-edit"></i></button>
+		<div class="row">
+			<div class="col-md-6 grView">
+				<p>View as:</p>
+				<button (click)='btnGrid()' [ngStyle]="{'color': showList ? '#6c757d' : '#007bff' }"><i class="fas fa-th-large d-inline"></i></button>
+				<button (click)='btnList()' [ngStyle]="{'color': showGrid ? '#6c757d' : '#007bff' }"><i class="fas fa-th-list d-inline"></i></button>
+			</div>
+			<div class="col-md-6 text-right">
+				<a routerLink='/mountains_creat' class="btn btn-info btnCreate"><i class="far fa-edit"></i>New create</a>
+			</div>
+		</div>
 	</div>
 </div>
 <app-mountain-list *ngIf='showList'></app-mountain-list>
