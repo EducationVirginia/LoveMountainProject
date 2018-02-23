@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms'
 import { Routes, RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
 import { MountainsService } from './services/mountains.service';
 import { BlogService } from './services/blog.service';
 
@@ -21,15 +25,25 @@ import { BlogItemComponent } from './blog/blog-item/blog-item.component';
 import { BlogEditComponent } from './blog/blog-detail/blog-edit/blog-edit.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReservarComponent } from './reservar/reservar.component';
+import { CreatingComponent } from './mountains/creating/creating.component';
 
 const appRoutes: Routes = [
   {path: 'tourmountains', component: MountainsComponent},
+  {path: 'mountains_creat', component: CreatingComponent},
   {path: 'tourmountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'blog_deatil/:id', component: BlogDetailComponent},
   {path: 'contact', component: ContactComponent},
 ]
  
+export const firebaseConfig = {
+  apiKey: "AIzaSyBtz7RyU-e82O1Yylx2g7KrfqhK0P9eftw",
+  authDomain: "lovemountais-projectplatzi.firebaseapp.com",
+  databaseURL: "https://lovemountais-projectplatzi.firebaseio.com",
+  storageBucket: "",
+  messagingSenderId: "99623597854"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +60,7 @@ const appRoutes: Routes = [
     BlogItemComponent,
     ContactComponent,
     ReservarComponent,
+    CreatingComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +68,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAUQJYch7LqsHbehONVtk_ETeJbFUuSBtM'
-    })
+    }),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [MountainsService, BlogService],
   bootstrap: [AppComponent]

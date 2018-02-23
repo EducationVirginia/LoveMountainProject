@@ -24,6 +24,7 @@
 		<p>View as:</p>
 		<button (click)='btnGrid()' [ngStyle]="{'color': showList ? '#6c757d' : '#007bff' }"><i class="fas fa-th-large"></i></button>
 		<button (click)='btnList()' [ngStyle]="{'color': showGrid ? '#6c757d' : '#007bff' }"><i class="fas fa-th-list"></i></button>
+		<button routerLink='/mountains_creat'><i class="far fa-edit"></i></button>
 	</div>
 </div>
 <app-mountain-list *ngIf='showList'></app-mountain-list>
