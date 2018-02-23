@@ -14,11 +14,40 @@
 <div class="well">
   <div class="container">
     <a routerLink="/">Home</a>
-    <p> /</p>
     <a routerLink="/blog_deatil/">Blog</a>
-    <p> /</p>
     <p>{{blog.title}}</p>
   </div>
 </div>
 <!-- /WELL -->
-<h1>{{blog.title}}</h1>
+<div class="container">
+	<div class="blog-detail">
+		<div class="row">
+			<div class="col-md-12">
+				<img src="{{blog.imagePath}}" alt="" class="img-fluid">
+				<div class="blog-content">
+					<h2>{{blog.title}}</h2>
+					<ul class="blog-meta">
+						<li>
+							<p class="article">by</p>
+							<p class="text">{{blog.autor}}</p>
+						</li>
+						<li>
+							<p class="article"></p>
+							<p class="text">{{blog.date}}</p>
+						</li>
+						<li>
+							<p class="article">in</p>
+							<p class="text">{{blog.country}}, {{blog.city}}</p>
+						</li>
+					</ul>
+					<p>{{blog.description}}</p>
+					<p>{{blog.description}}</p>
+					<p>{{blog.description}}</p>
+					<p>{{blog.description}}</p>
+					<p>{{blog.description}}</p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
