@@ -1,0 +1,89 @@
+<!-- HEADER -->
+<header class="header_corto">
+  <div class="container">
+    <div class="content-inner">
+      <div class="item">
+        <h2>Creating Mountain</h2>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- /HEADER -->
+
+<!-- WELL -->
+<div class="well">
+  <div class="container">
+    <a routerLink="/">Home</a>
+    <p>Creating Mountain</p>
+  </div>
+</div>
+<!-- /WELL -->
+
+<div class="container">
+	<form class="forms-creating">
+	    <div class="row">
+	      
+			<div class="col-md-12">
+
+				<div class="mb-3">
+					<label for="address">Title</label>
+					<input type="text" class="form-control" id="title" placeholder="Writing title" [(ngModel)]="mountain.title" name='title'>
+				</div>
+
+				<div class="mb-3">
+					<label for="address">Image</label>
+					<input type="url" class="form-control" id="title" placeholder="www.." [(ngModel)]="mountain.imagePath" name='imagen'>
+				</div>
+
+				<div class="mb-3">
+					<label for="address">Autor</label>
+					<input type="text" class="form-control" id="title" placeholder="Name" [(ngModel)]="mountain.by" name='autor'>
+				</div>
+
+				<div class="mb-3">
+					<label for="address">Twiiter</label>
+					<input type="text" class="form-control" id="title" placeholder="@.." [(ngModel)]="mountain.twitter" name='twitter'>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label for="firstName">Country</label>
+						<input type="text" class="form-control" id="firstName" placeholder="Francia" [(ngModel)]="mountain.country" name='country'>
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="lastName">City</label>
+						<input type="text" class="form-control" id="lastName" placeholder="París" value="" [(ngModel)]="mountain.city" name='city'>
+					</div>
+				</div>	
+
+				<div class="mb-3">
+					<label for="address">Description</label>
+					<textarea class="form-control" id="address" placeholder="Escribir" name='description' rows="5" [(ngModel)]="mountain.description"></textarea>
+				</div>
+
+				<div class="mb-3">
+					<label for="address">Summary</label>
+					<textarea class="form-control" id="address" placeholder="Escribir" name='description' rows="2" [(ngModel)]="mountain.summary"></textarea>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<label for="firstName">Elevation</label>
+						<input type="number" class="form-control" id="firstName" name='elevation' placeholder="4,559 m" value="" [(ngModel)]="mountain.elevation">
+					</div>
+					<div class="col-md-6 mb-3">
+							<label for="lastName">First Ascent</label>
+						<input type="number" class="form-control" id="lastName" name='ascent' placeholder="1986" value="" [(ngModel)]="mountain.ascent">
+					</div>
+				</div>
+				
+			</div>
+	     
+	     	<div class="col-md-12">
+				<button class="btn btn-primary" type="submit" (click)='saveMountains()'>Save</button>
+				<button class="btn btn-danger" type="submit">Delete</button>
+				<button class="btn btn-default" type="submit">Cancel</button>
+	     	</div>
+		</div>
+	</form>
+</div>

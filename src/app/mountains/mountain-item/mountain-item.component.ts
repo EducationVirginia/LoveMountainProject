@@ -9,10 +9,13 @@ import { MountainsService } from '../../services/mountains.service';
 export class MountainItemComponent implements OnInit {
 	
 	mountains = null;
+	
 	constructor(private MountainsService: MountainsService) {
-		this.mountains = MountainsService.getMountains();
+		MountainsService.getMountains()
+			.valueChanges().subscribe((mountains) => {
+				this.mountains = mountains;
+			});
 	}
-
 	ngOnInit() {
 	}
 

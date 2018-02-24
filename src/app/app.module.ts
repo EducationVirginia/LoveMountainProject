@@ -25,11 +25,11 @@ import { BlogItemComponent } from './blog/blog-item/blog-item.component';
 import { BlogEditComponent } from './blog/blog-detail/blog-edit/blog-edit.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReservarComponent } from './reservar/reservar.component';
-import { CreatingComponent } from './mountains/creating/creating.component';
+import { MountainCreatingComponent } from './mountains/creating/mountain-creating.component';
 
 const appRoutes: Routes = [
   {path: 'mountains', component: MountainsComponent},
-  {path: 'mountains_creat', component: CreatingComponent},
+  {path: 'mountains_creat', component: MountainCreatingComponent},
   {path: 'mountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
   {path: 'blog_deatil/:id', component: BlogDetailComponent},
@@ -60,7 +60,7 @@ export const firebaseConfig = {
     BlogItemComponent,
     ContactComponent,
     ReservarComponent,
-    CreatingComponent,
+    MountainCreatingComponent,
   ],
   imports: [
     BrowserModule,

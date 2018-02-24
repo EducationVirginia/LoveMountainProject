@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Injectable()
 export class MountainsService {
@@ -70,14 +71,22 @@ export class MountainsService {
 			topBgImgHeader: '-175%'
 		}
 	];
+  	constructor(private afDB: AngularFireDatabase) {
+
+  	}
+
 	public getMountains() {
-		return this.mountains;
+		return this.afDB.list('mountains/');
 	}
 	public detailMount(id){
 		return this.mountains.find((mountain) => {
 			return mountain.id == id 
 		});
 	}
-  constructor() { }
+	public saveMountainServer(mountain){
+		console.log(mountain);
+		this.afDB.database.ref('mountains/' + mountain.id).set(mountain);
+	}
+  	
 
 }
