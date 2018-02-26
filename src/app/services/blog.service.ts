@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Injectable()
 export class BlogService {
@@ -70,14 +71,23 @@ export class BlogService {
 			city: 'Zermatt'
 		}
 	];
+
+	constructor(private afDB: AngularFireDatabase) {
+
+  	}
 	public getBlogs() {
-		return this.blogs;
+		return this.afDB.list('blog/');
 	}
 	public detailBlog(id){
 		return this.blogs.find((blog) => {
 			return blog.id == id 
 		});
 	}
-  constructor() { }
-
+	public saveBlogServer(blog){
+		console.log(blog);
+		this.afDB.database.ref('blog/' + blog.id).set(blog);
+	}
+	public getBlog(id) {
+		return this.afDB.object(`blog/${id}`);
+	}
 }

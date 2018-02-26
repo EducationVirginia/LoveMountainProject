@@ -3,18 +3,34 @@ header
 	height: 160px;
 	background: none;
 	overflow: hidden;
+	&:after 
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.1);
 	.bgImgId
 		position: absolute;
 		left: 0;
 		width: 100%;
 		height: 100%;
-		z-index: -3;
 		img
 			max-width: 100%;
 	.content-inner 
 		height: 160px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
 		.item
+			align-self: center;
+			margin: auto;
+			text-align: center;
 			h2 
+				color: #fff !important;
 				font-size: 50px;
 .mountain-detail-content
 	img

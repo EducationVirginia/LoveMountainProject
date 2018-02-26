@@ -11,7 +11,10 @@ export class BlogItemComponent implements OnInit {
 	blogs = null;
 
 	constructor(private BlogService: BlogService) {
-		this.blogs = BlogService.getBlogs();
+		BlogService.getBlogs()
+			.valueChanges().subscribe((blog) => {
+				this.blogs = blog;
+			})
 	}
 
 	ngOnInit() {

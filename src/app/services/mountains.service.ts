@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Http } from '@angular/http';
 
 @Injectable()
 export class MountainsService {
@@ -71,10 +72,9 @@ export class MountainsService {
 			topBgImgHeader: '-175%'
 		}
 	];
-  	constructor(private afDB: AngularFireDatabase) {
+  	constructor(private afDB: AngularFireDatabase, private http: Http) {
 
   	}
-
 	public getMountains() {
 		return this.afDB.list('mountains/');
 	}
@@ -84,9 +84,19 @@ export class MountainsService {
 		});
 	}
 	public saveMountainServer(mountain){
-		console.log(mountain);
+		this.afDB.database.ref('mountains/' + mountain.id).set(mountain);
+	}
+
+	public editMountainServer(mountain){
 		this.afDB.database.ref('mountains/' + mountain.id).set(mountain);
 	}
   	
+  	public obtGeoData(address){
+  		return this.http.get('http://maps.googleapis.com/maps/api/geocode/xml?address=' + address);
+  	}
+
+  	public getMountain(id) {
+		return this.afDB.object('mountains/' + id);
+	}
 
 }

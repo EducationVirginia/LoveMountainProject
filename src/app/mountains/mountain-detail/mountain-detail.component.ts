@@ -9,8 +9,6 @@ import { MountainsService } from '../../services/mountains.service';
 })
 export class MountainDetailComponent implements OnInit {
 
-	lat: number = 46.4102012;
-	lng: number = 11.5850429;
 	id = null;
 	mountain: any = {};
 

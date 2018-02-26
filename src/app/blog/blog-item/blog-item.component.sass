@@ -1,0 +1,46 @@
+.blog-item
+	.row	
+		margin-bottom: 10px;
+	.imagen
+		overflow: hidden;
+		height: 236px;
+		position: relative;
+		background-color: rgba(0,0,0, 0.03);
+		img
+			bottom: 100%;
+			position: relative;
+			max-width: 100%;
+	.blog-content
+		margin-top: 12px;
+		h4
+			a 
+				color: inherit;
+				&:hover 
+					color: var(--blue);
+		a
+			font-weight: 600;
+			.svg-inline--fa
+				position: relative;
+				top: 2px;
+		.blog-meta
+			padding-left: 0;
+			margin-bottom: 0;
+			li, p
+				display: inline-block;
+
+			li
+				&:last-child 
+					&:after
+						content: '';
+
+				&:after
+					content: '/';
+					color: #fddd;
+				p
+					font-size: 12px;
+
+				.text
+					color: #FA3344;
+					font-weight: 600;
+				.article
+					color: var(--gray);

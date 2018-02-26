@@ -1,0 +1,25 @@
+.blog-detail
+	.row	
+		margin-bottom: 10px;
+	img
+		max-width: 100%;
+	.blog-content
+		margin-top: 12px;
+		.blog-meta
+			padding-left: 0;
+			margin-bottom: 0;
+			li, p
+				display: inline-block;
+			li
+				&:matches(:last-child :after)
+					content: '';
+				&:after
+					content: '/';
+					color: #fddd;
+				p
+					font-size: 12px;
+				.text
+					color: #FA3344;
+					font-weight: 600;
+				.article
+					color: var(--gray);

@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms'
 import { Routes, RouterModule } from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
@@ -22,16 +24,17 @@ import { MountainItemComponent } from './mountains/mountain-item/mountain-item.c
 import { BlogComponent } from './blog/blog.component';
 import { BlogDetailComponent } from './blog/blog-detail/blog-detail.component';
 import { BlogItemComponent } from './blog/blog-item/blog-item.component';
-import { BlogEditComponent } from './blog/blog-detail/blog-edit/blog-edit.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReservarComponent } from './reservar/reservar.component';
-import { MountainCreatingComponent } from './mountains/creating/mountain-creating.component';
+import { MountainCreatingComponent } from './mountains/mountain-creating/mountain-creating.component';
+import { BlogCreatingComponent } from './blog/blog-creating/blog-creating.component';
 
 const appRoutes: Routes = [
   {path: 'mountains', component: MountainsComponent},
-  {path: 'mountains_creat', component: MountainCreatingComponent},
+  {path: 'mountains_creat/:id', component: MountainCreatingComponent},
   {path: 'mountains_deatil/:id', component: MountainDetailComponent},
   {path: 'blog', component: BlogComponent},
+  {path: 'blog_creat/:id', component: BlogCreatingComponent},
   {path: 'blog_deatil/:id', component: BlogDetailComponent},
   {path: 'contact', component: ContactComponent},
 ]
@@ -56,15 +59,17 @@ export const firebaseConfig = {
     MountainItemComponent,
     BlogComponent,
     BlogDetailComponent,
-    BlogEditComponent,
     BlogItemComponent,
     ContactComponent,
     ReservarComponent,
     MountainCreatingComponent,
+    BlogCreatingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgbModule.forRoot(),
+    HttpModule,
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAUQJYch7LqsHbehONVtk_ETeJbFUuSBtM'

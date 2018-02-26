@@ -14,6 +14,7 @@
 <div class="well">
   <div class="container">
     <a routerLink="/">Home</a>
+    <a routerLink="/mountains">Best Mountains</a>
     <p>Creating Mountain</p>
   </div>
 </div>
@@ -30,10 +31,6 @@
 					<input type="text" class="form-control" id="title" placeholder="Writing title" [(ngModel)]="mountain.title" name='title'>
 				</div>
 
-				<div class="mb-3">
-					<label for="address">Image</label>
-					<input type="url" class="form-control" id="title" placeholder="www.." [(ngModel)]="mountain.imagePath" name='imagen'>
-				</div>
 
 				<div class="mb-3">
 					<label for="address">Autor</label>
@@ -45,14 +42,19 @@
 					<input type="text" class="form-control" id="title" placeholder="@.." [(ngModel)]="mountain.twitter" name='twitter'>
 				</div>
 
+				<div class="mb-3">
+					<label for="address">Image</label>
+					<input type="url" class="form-control" id="title" placeholder="www.." [(ngModel)]="mountain.imagePath" name='imagen'>
+				</div>
+
 				<div class="row">
-					<div class="col-md-6 mb-3">
-						<label for="firstName">Country</label>
-						<input type="text" class="form-control" id="firstName" placeholder="Francia" [(ngModel)]="mountain.country" name='country'>
-					</div>
 					<div class="col-md-6 mb-3">
 						<label for="lastName">City</label>
 						<input type="text" class="form-control" id="lastName" placeholder="París" value="" [(ngModel)]="mountain.city" name='city'>
+					</div>
+					<div class="col-md-6 mb-3">
+						<label for="firstName">Country</label>
+						<input type="text" class="form-control" id="firstName" placeholder="Francia" [(ngModel)]="mountain.country" name='country'>
 					</div>
 				</div>	
 
@@ -80,8 +82,8 @@
 			</div>
 	     
 	     	<div class="col-md-12">
-				<button class="btn btn-primary" type="submit" (click)='saveMountains()'>Save</button>
-				<button class="btn btn-danger" type="submit">Delete</button>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" type="submit" (click)='saveMountains()'>Save</button>
+				<button class="btn btn-danger" type="submit" (click)='deleteMountains()'>Delete</button>
 				<button class="btn btn-default" type="submit">Cancel</button>
 	     	</div>
 		</div>

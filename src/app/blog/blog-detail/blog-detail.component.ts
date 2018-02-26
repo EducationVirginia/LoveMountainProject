@@ -12,8 +12,6 @@ export class BlogDetailComponent implements OnInit {
 	id = null;
 	blog: any = {};
 
-
-
 	constructor(private route: ActivatedRoute, private  BlogService: BlogService ) { 
 		this.id = this.route.snapshot.params['id'];
 		this.blog = this.BlogService.detailBlog(this.id);
