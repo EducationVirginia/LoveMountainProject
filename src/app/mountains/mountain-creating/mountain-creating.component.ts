@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MountainsService } from '../../services/mountains.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 
@@ -13,7 +14,7 @@ export class MountainCreatingComponent {
 	mountain: any = {};
 	id: any = null;
 
-	constructor(private MountainsService: MountainsService, private route: ActivatedRoute) { 
+	constructor(private MountainsService: MountainsService, private route: ActivatedRoute, private _router: Router) { 
 		this.id = this.route.snapshot.params['id'];
 		console.log(this.id);
 		if(this.id != 'new'){
@@ -25,6 +26,7 @@ export class MountainCreatingComponent {
 	}
 
 	saveMountains() {
+		
 	
 		const address = this.mountain.country + ',' + this.mountain.city 
 		
@@ -41,10 +43,12 @@ export class MountainCreatingComponent {
 				if(this.id != 'new') {
 					this.MountainsService.editMountainServer(this.mountain);
 					alert('Editar con valido');
+					this._router.navigate(['/mountains_crea', 'new']);
 				} else {
 					this.mountain.id = Date.now();
 					this.MountainsService.saveMountainServer(this.mountain);
 					alert('Guardado con valido');
+					this._router.navigate(['/mountains_crea', 'new']);
 				}
 				
 				this.mountain = {};

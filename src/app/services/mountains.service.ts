@@ -92,7 +92,7 @@ export class MountainsService {
 	}
   	
   	public obtGeoData(address){
-  		return this.http.get('http://maps.googleapis.com/maps/api/geocode/xml?address=' + address);
+  		return this.http.get('http://maps.googleapis.com/maps/api/geocode/json?address=' + address);
   	}
 
   	public getMountain(id) {
